@@ -18,7 +18,7 @@ export async function createClient() {
               cookieStore.set(name, value, options)
             )
           } catch {
-            // O componente pode ser um Server Component e não conseguir alterar cookies
+            // Server Components podem ignorar se chamados durante pré-renderização estática
           }
         },
       },
